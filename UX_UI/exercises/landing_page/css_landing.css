@@ -1,0 +1,18 @@
+#titleContent{
+    background-image: url('https://codegym.vn/wp-content/uploads/2018/07/office_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    height: 550px;
+    margin-bottom: 30px;
+}
+nav{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+i{
+    color: orange;
+    width: 100%;
+    margin-bottom: 15px;
+}
