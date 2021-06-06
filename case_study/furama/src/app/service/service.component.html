@@ -1,0 +1,121 @@
+<table id="tableEmployee" class="table table-striped table-bordered" style="width: 100%">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Code</th>
+    <th scope="col">Name</th>
+    <th scope="col">Standard</th>
+    <th scope="col">Area</th>
+    <th scope="col">Pool area</th>
+    <th scope="col">Number of floor</th>
+    <th scope="col">Max of people</th>
+    <th scope="col">Description other convenience</th>
+    <th scope="col">Status</th>
+    <th scope="col">Cost</th>
+    <th scope="col">Service Type</th>
+    <th scope="col">Rent Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>NV-1234</td>
+    <td>Nguyen Van A</td>
+    <td>1234567891</td>
+    <td>12/05/1991</td>
+    <td>0903125482</td>
+    <td>Da Nang</td>
+    <td>President</td>
+    <td>University</td>
+    <td>Manager</td>
+    <td>10000</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>NV-1234</td>
+    <td>Nguyen Van A</td>
+    <td>1234567891</td>
+    <td>12/05/1991</td>
+    <td>0903125482</td>
+    <td>Da Nang</td>
+    <td>President</td>
+    <td>University</td>
+    <td>Manager</td>
+    <td>10000</td>
+  </tr>
+  </tbody>
+</table>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+
+<!--Form Create-->
+<form>
+  <div class="form-group">
+    <label for="serCode">Service code</label>
+    <input type="text" class="form-control" id="serCode" placeholder="Code">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="standard">Standard</label>
+    <input type="text" class="form-control" id="standard" placeholder="Standard">
+  </div>
+  <div class="form-group">
+    <label for="area">Area</label>
+    <input type="number" class="form-control" id="area" placeholder="Area">
+  </div>
+  <div class="form-group">
+    <label for="pool">Pool area</label>
+    <input type="number" class="form-control" id="pool" placeholder="Pool area">
+  </div>
+  <div class="form-group">
+    <label for="floor">Number floor</label>
+    <input type="number" class="form-control" id="floor" placeholder="Number floor">
+  </div>
+  <div class="form-group">
+    <label for="max">Max of people </label>
+    <input type="text" class="form-control" id="max" placeholder="Max of people">
+  </div>
+  <div class="form-group">
+    <label for="convenience">Description other convenience</label>
+    <input type="text" class="form-control" id="convenience" placeholder="Description other convenience">
+  </div>
+  <div class="form-group">
+    <label for="status">Status</label>
+    <input type="text" class="form-control" id="status" placeholder="Status">
+  </div>
+  <div class="form-group">
+    <label for="cost">Cost</label>
+    <input type="number" class="form-control" id="cost" placeholder="Cost">
+  </div>
+
+  <div class="form-group">
+    <label for="type">Service type</label>
+    <select class="custom-select" id="type">
+      <option>Villa</option>
+      <option>Room</option>
+      <option>House</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="rent">Rent type</label>
+    <select class="custom-select" id="rent" >
+      <option>Year</option>
+      <option>Month</option>
+      <option>Day</option>
+      <option>Hour</option>
+    </select>
+  </div>
+  <div class="form-group" style="text-align: left">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
