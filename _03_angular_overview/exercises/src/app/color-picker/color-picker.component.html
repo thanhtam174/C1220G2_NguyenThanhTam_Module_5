@@ -1,0 +1,23 @@
+<div class="form-group">
+  <div class="form-row">
+    <div class="col-6">
+      <label for="exampleFormControlTextarea1">Show color</label>
+      <textarea readonly class="form-control" id="exampleFormControlTextarea1" rows="3"
+                style="background: {{color}}"></textarea>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+<div class="form-group">
+  <div class="form-row">
+    <div class="col-1">
+      <label for="codeColor">Color code</label>
+      <input type="text" id="codeColor" class="form-control" [(ngModel)]="color">
+    </div>
+    <div class="col-1">
+      <label for="chooseColor">Select color:</label>
+      <input type="color" id="chooseColor" class="form-control" [(ngModel)]="color">
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

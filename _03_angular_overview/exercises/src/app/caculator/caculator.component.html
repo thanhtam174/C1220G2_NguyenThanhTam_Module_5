@@ -1,0 +1,36 @@
+<h2>Caculator</h2>
+<div class="form-row">
+  <div class="col">
+    <input type="number" [(ngModel)]="number1" class="form-control" placeholder="First Number">
+  </div>
+  <div class="col">
+    <input type="number" [(ngModel)]="number2" class="form-control" placeholder="Second Number">
+  </div>
+  <div class="col-4"></div>
+</div>
+<br>
+<div class="form-row">
+  <div class="col">
+    <button type="button" class="btn btn-light" (click)="add($event)">Addition</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-light" (click)="sub($event)">Subtraction</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-light" (click)="mul($event)">Multiplication</button>
+  </div>
+  <div class="col">
+    <button type="button" class="btn btn-light" (click)="div($event)">Division</button>
+  </div>
+  <div class="col-8"></div>
+</div>
+<br>
+<div class="form-row">
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Result</label>
+      <textarea readonly class="form-control" id="exampleFormControlTextarea1" rows="3" value="{{result}}"></textarea>
+    </div>
+  </div>
+  <div class="col-4"></div>
+</div>
