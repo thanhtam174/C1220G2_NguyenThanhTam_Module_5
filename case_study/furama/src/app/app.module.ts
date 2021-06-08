@@ -9,6 +9,10 @@ import { ServiceComponent } from './service/service.component';
 import { ContractComponent } from './contract/contract.component';
 import { ContractDetailComponent } from './contract-detail/contract-detail.component';
 import {FormsModule} from '@angular/forms';
+import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { CreateServiceComponent } from './create-service/create-service.component';
+import { CreateContractComponent } from './create-contract/create-contract.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import {FormsModule} from '@angular/forms';
     EmployeeComponent,
     ServiceComponent,
     ContractComponent,
-    ContractDetailComponent
+    ContractDetailComponent,
+    CreateCustomerComponent,
+    CreateEmployeeComponent,
+    CreateServiceComponent,
+    CreateContractComponent
   ],
     imports: [
         BrowserModule,
