@@ -1,5 +1,5 @@
 {
-  "name": "furama",
+  "name": "practices",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,11 +19,7 @@
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
-    "bootstrap": "^4.6.0",
-    "jquery": "^3.6.0",
-    "ngx-pagination-bootstrap": "^1.6.0",
     "rxjs": "~6.5.4",
-    "s": "^1.0.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

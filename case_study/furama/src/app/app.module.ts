@@ -13,6 +13,7 @@ import { CreateCustomerComponent } from './create-customer/create-customer.compo
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { CreateServiceComponent } from './create-service/create-service.component';
 import { CreateContractComponent } from './create-contract/create-contract.component';
+import { PaginationModule } from 'ngx-pagination-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CreateContractComponent } from './create-contract/create-contract.compo
     CreateCustomerComponent,
     CreateEmployeeComponent,
     CreateServiceComponent,
-    CreateContractComponent
+    CreateContractComponent,
+    PaginationModule
   ],
     imports: [
         BrowserModule,

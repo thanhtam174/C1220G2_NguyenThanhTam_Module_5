@@ -1,0 +1,5 @@
+<p>rating-bar works!</p>
+
+<ng-container *ngFor="let color of colors; index as i ">
+  <button type="button" (click)="onClick(i)" [ngStyle]="{'background':color}">{{i+1}}</button>
+</ng-container>
