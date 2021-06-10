@@ -1,0 +1,101 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md"></div>
+    <div class="col-md-8">
+      <h2 style="color: orangered; text-align: center">Register</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="inputEmail">Email</label>
+            <input formControlName="email" name="email" type="text" class="form-control" id="inputEmail"
+                   placeholder="Enter email">
+            <div *ngIf="!email.valid && email.touched">
+              <small [hidden]="!email.hasError('required')" class="text-danger">You must enter email</small>
+              <small [hidden]="!email.hasError('pattern')" class="text-danger">Invalid email</small>
+            </div>
+          </div>
+        </div>
+        <fieldset class="form-row" formGroupName="passGroup">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Password</label>
+            <input formControlName="password" name="password" type="password" class="form-control" id="inputEmail4">
+            <div *ngIf="!passGroup.valid && passGroup.touched">
+              <div><small [hidden]="!passGroup.hasError('passwordNotMatch')" class="text-danger">Password does not
+                match</small></div>
+              <div><small [hidden]="!passGroup.get('password').hasError('required')" class="text-danger">You must enter
+                password</small></div>
+              <div><small [hidden]="!passGroup.get('password').hasError('minlength')" class="text-danger">Password must
+                be more
+                than 6 characters</small></div>
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Confirm password</label>
+            <input formControlName="confirmPassword" name="confirmPassword" type="password" class="form-control"
+                   id="inputPassword4">
+          </div>
+        </fieldset>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <fieldset class="form-group row">
+              <legend class="col-form-label col-sm-2 float-sm-left pt-0">Gender</legend>
+              <div class="col-sm-10">
+                <div style="margin-top: 25px" class="form-check">
+                  <input class="form-check-input" type="radio" formControlName="gender" name="gender"
+                         id="gridRadios1" value="1" checked>
+                  <label class="form-check-label" for="gridRadios1">
+                    Male
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="2">
+                  <label class="form-check-label" for="gridRadios2">
+                    Female
+                  </label>
+                </div>
+                <div *ngIf="!gender.valid && gender.touched">
+                  <small [hidden]="!gender.hasError('required')" class="text-danger">You must choose</small>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputCity">Phone</label>
+            <input formControlName="phone" name="phone" type="text" class="form-control" id="inputCity">
+            <div *ngIf="!phone.valid && phone.touched">
+              <small [hidden]="!phone.hasError('required')" class="text-danger">You must enter phone</small>
+              <small [hidden]="!phone.hasError('pattern')" class="text-danger">Invalid phone</small>
+            </div>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputState">Country</label>
+            <select formControlName="country" name="country" id="inputState" class="form-control">
+              <option *ngFor="let country of countryList" value="{{country.id}}">{{country.name}}</option>
+            </select>
+            <div *ngIf="!country.valid && country.touched">
+              <small [hidden]="!country.hasError('required')" class="text-danger">You must choose country</small>
+            </div>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Age</label>
+            <input formControlName="age" name="age" type="number" class="form-control" id="inputZip">
+            <div *ngIf="!age.valid && age.touched">
+              <small [hidden]="!age.hasError('required')" class="text-danger">You must enter age</small>
+              <small [hidden]="!age.hasError('min')" class="text-danger">Age must be greater 18</small>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Sign in</button>
+      </form>
+    </div>
+    <div class="col-md"></div>
+  </div>
+</div>
