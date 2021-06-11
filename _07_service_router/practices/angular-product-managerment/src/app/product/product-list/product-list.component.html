@@ -1,0 +1,19 @@
+<h1>Danh sách sản phẩm</h1>
+<table border="1">
+  <tr>
+    <th>STT</th>
+    <th>Tên</th>
+    <th>Giá</th>
+    <th>Mô tả</th>
+    <th>Sửa</th>
+    <th>Xóa</th>
+  </tr>
+  <tr *ngFor="let product of products; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <td><button [routerLink]="['edit',product.id]">Sửa</button></td>
+    <td><button (click)="delete(product.id)">Xóa</button></td>
+  </tr>
+</table>
