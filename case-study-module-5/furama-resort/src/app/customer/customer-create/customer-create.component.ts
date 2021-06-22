@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CustomerService} from '../../service/customer.service';
 import {Customer} from '../../model/customer';
 import {Router} from '@angular/router';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-customer-create',
@@ -26,7 +27,8 @@ export class CustomerCreateComponent implements OnInit {
   typeCustomerList:string[]=[];
 
   constructor(private customerService: CustomerService,
-              private router: Router) {
+              private router: Router,
+              private toastr: ToastrService) {
     this.customerService.getAllTypeCustomer().subscribe(
       data => this.typeCustomerList = data
     );
@@ -37,7 +39,24 @@ export class CustomerCreateComponent implements OnInit {
 
   submit() {
     this.newCustomer = this.customerForm.value;
-    this.customerService.addCustomer(this.newCustomer).subscribe();
+    this.customerService.addCustomer(this.newCustomer).subscribe(value => {
+      this.showSuccess();
+      }, error => {
+
+      },
+      () => {
+        this.router.navigateByUrl('/customer')
+      }
+    );
+
+  }
+
+  showSuccess() {
+    this.toastr.success('Create Successfully!', 'Notification!',{
+      timeOut: 1000,
+      progressBar: true,
+      progressAnimation: 'increasing',
+    });
   }
 
 

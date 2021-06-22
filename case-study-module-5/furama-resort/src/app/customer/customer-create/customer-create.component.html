@@ -9,16 +9,16 @@
           <label for="code">Customer code</label>
           <input formControlName="code" name="code" type="text" class="form-control" id="code" placeholder="Enter code">
           <div *ngIf="!code.valid && code.touched">
-            <small [hidden]="!code.hasError('required')" class="text-danger">You must enter code</small>
-            <small [hidden]="!code.hasError('pattern')" class="text-danger">Invalid code (Example: KH-0001)</small>
+            <small [hidden]="!code.hasError('required')" class="text-danger">You must enter code.</small>
+            <small [hidden]="!code.hasError('pattern')" class="text-danger">Invalid code (Example: KH-0001).</small>
           </div>
         </div>
         <div class="form-group">
           <label for="name">Name</label>
           <input formControlName="name" name="name" type="text" class="form-control" id="name" placeholder="Enter name">
           <div *ngIf="!name.valid && name.touched">
-            <small [hidden]="!name.hasError('required')" class="text-danger">You must enter name</small>
-            <small [hidden]="!name.hasError('pattern')" class="text-danger">Invalid name(Example: John Doe)</small>
+            <small [hidden]="!name.hasError('required')" class="text-danger">You must enter name.</small>
+            <small [hidden]="!name.hasError('pattern')" class="text-danger">Invalid name(Example: John Doe).</small>
           </div>
         </div>
         <div class="form-group">
@@ -26,8 +26,8 @@
           <input formControlName="birthday" name="birthday" type="date" class="form-control" id="birthday"
                  placeholder="Birthday">
           <div *ngIf="!birthday.valid && birthday.touched">
-            <small [hidden]="!birthday.hasError('required')" class="text-danger">You must enter birthday</small>
-            <small [hidden]="!birthday.hasError('pattern')" class="text-danger">Invalid birthday</small>
+            <small [hidden]="!birthday.hasError('required')" class="text-danger">You must enter birthday.</small>
+            <small [hidden]="!birthday.hasError('pattern')" class="text-danger">Invalid birthday.</small>
           </div>
         </div>
         <div class="form-group">
@@ -35,9 +35,9 @@
           <input formControlName="idCard" name="idCard" type="text" class="form-control" id="idCard"
                  placeholder="Enter Id Card">
           <div *ngIf="!idCard.valid && idCard.touched">
-            <small [hidden]="!idCard.hasError('required')" class="text-danger">You must enter id card</small>
+            <small [hidden]="!idCard.hasError('required')" class="text-danger">You must enter id card.</small>
             <small [hidden]="!idCard.hasError('pattern')" class="text-danger">Invalid id card (Example: 123456789 or
-              123456789123)</small>
+              123456789123).</small>
           </div>
         </div>
         <div class="form-group">
@@ -45,9 +45,9 @@
           <input formControlName="email" name="email" type="text" class="form-control" id="email"
                  placeholder="abc@.gmailcom">
           <div *ngIf="!email.valid && email.touched">
-            <small [hidden]="!email.hasError('required')" class="text-danger">You must enter email</small>
+            <small [hidden]="!email.hasError('required')" class="text-danger">You must enter email.</small>
             <small [hidden]="!email.hasError('pattern')" class="text-danger">Invalid email(Example:
-              abc@.gmailcom)</small>
+              abc@.gmailcom).</small>
           </div>
         </div>
         <div class="form-group">
@@ -58,7 +58,7 @@
             <option value="Unknown">Unknown</option>
           </select>
           <div *ngIf="!gender.valid && gender.touched">
-            <small [hidden]="!gender.hasError('required')" class="text-danger">You must choose gender</small>
+            <small [hidden]="!gender.hasError('required')" class="text-danger">You must choose gender.</small>
           </div>
         </div>
         <div class="form-group">
@@ -66,9 +66,9 @@
           <input formControlName="phone" name="phone" type="text" class="form-control" id="phone"
                  placeholder="Enter Phone">
           <div *ngIf="!phone.valid && phone.touched">
-            <small [hidden]="!phone.hasError('required')" class="text-danger">You must enter phone</small>
+            <small [hidden]="!phone.hasError('required')" class="text-danger">You must enter phone.</small>
             <small [hidden]="!phone.hasError('pattern')" class="text-danger">Invalid email(Example: 090xxxxxxx or
-              091xxxxxxx or (84)+90xxxxxxx or (84)+91xxxxxxx)</small>
+              091xxxxxxx or (84)+90xxxxxxx or (84)+91xxxxxxx).</small>
           </div>
         </div>
         <div class="form-group">
@@ -76,7 +76,7 @@
           <input formControlName="address" name="address" type="text" class="form-control" id="address"
                  placeholder="Enter Address">
           <div *ngIf="!address.valid && address.touched">
-            <small [hidden]="!address.hasError('required')" class="text-danger">You must enter address</small>
+            <small [hidden]="!address.hasError('required')" class="text-danger">You must enter address.</small>
           </div>
         </div>
         <div class="form-group">
@@ -87,7 +87,7 @@
           </select>
           <div *ngIf="!typeCustomer.valid && typeCustomer.touched">
             <small [hidden]="!typeCustomer.hasError('required')" class="text-danger">You must choose type
-              customer</small>
+              customer.</small>
           </div>
         </div>
         <div class="form-group" style="text-align: left">
@@ -98,3 +98,4 @@
     <div class="col"></div>
   </div>
 </div>
+

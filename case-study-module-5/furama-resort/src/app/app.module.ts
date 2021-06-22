@@ -6,6 +6,7 @@ import { ContractDetailPageComponent } from './contract-detail/contract-detail-p
 import {CustomerModule} from './customer/customer.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {RouterModule} from '@angular/router';
+import {EmployeeModule} from './employee/employee.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {RouterModule} from '@angular/router';
     BrowserModule,
     CustomerModule,
     NgbModule,
-    RouterModule
+    RouterModule,
+    EmployeeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

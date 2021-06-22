@@ -1,8 +1,38 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col"></div>
-    <div class="col-10">
-      <button class="btn btn-primary" routerLink="create">Create</button>
+    <div class="col-2">
+      <button class="btn btn-outline-primary" routerLink="create">Create new customer</button>
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col-4">
+          <input class="form-control" [(ngModel)]="searchByNameApi" type="search"
+                 placeholder="Search by name"
+                 aria-label="Search by name">
+        </div>
+        <div class="col-3">
+          <input class="form-control" [(ngModel)]="fromDate" type="date"
+                 placeholder="Search by name"
+                 aria-label="Search by name">
+        </div>
+        <div class="col-3">
+          <input class="form-control" [(ngModel)]="toDate" type="date"
+                 placeholder="Search by name"
+                 aria-label="Search by name">
+        </div>
+        <div class="col-2">
+          <button class="btn btn-outline-success" (click)="searchNameApi()">Search</button>
+        </div>
+      </div>
+    </div>
+<!--    <div class="col-4">-->
+<!--      <input class="form-control" [(ngModel)]="searchByName" type="search"-->
+<!--             placeholder="Search by name"-->
+<!--             aria-label="Search by name">-->
+<!--    </div>-->
+  </div>
+  <div class="row">
+    <div class="col-12">
       <table id="tableCustomer" class="table table-striped table-bordered" style="width: 100%">
         <thead>
         <tr>
@@ -16,28 +46,38 @@
           <th scope="col">Phone</th>
           <th scope="col">Address</th>
           <th scope="col">Type customer</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let customer of customers| slice: (page-1) * pageSize : page * pageSize; index as i">
-          <th scope="row">{{i+1}}</th>
+          <th scope="row">{{i + 1}}</th>
           <td>{{customer.code}}</td>
           <td>{{customer.name}}</td>
-          <td>{{customer.birthday}}</td>
+          <td>{{customer.birthday | date:'dd/MM/yyyy'}}</td>
           <td>{{customer.idCard}}</td>
           <td>{{customer.email}}</td>
           <td>{{customer.gender}}</td>
           <td>{{customer.phone}}</td>
           <td>{{customer.address}}</td>
           <td>{{ customer.typeCustomer['name']}}</td>
-          <td><button class="btn btn-success" [routerLink]="['update',customer.id]">Edit</button></td>
-          <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="send(customer.id)">Delete</button></td>
+          <td>
+            <button class="btn btn-outline-success" [routerLink]="['update',customer.id]">Edit</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal"
+                    (click)="send(customer.id)">Delete
+            </button>
+          </td>
         </tr>
         </tbody>
       </table>
-      <ngb-pagination class="float-right" [collectionSize]="30" [(page)]="page" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+      <div class="float-right clearfix">
+        <ngb-pagination [collectionSize]="(customers.length/pageSize)*10" [(page)]="page" [maxSize]="2"
+                        [boundaryLinks]="true"></ngb-pagination>
+      </div>
     </div>
-    <div class="col"></div>
   </div>
 </div>
 

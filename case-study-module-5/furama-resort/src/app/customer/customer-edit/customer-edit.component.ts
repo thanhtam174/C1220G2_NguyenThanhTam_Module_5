@@ -4,6 +4,7 @@ import {Customer} from '../../model/customer';
 import {CustomerService} from '../../service/customer.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-customer-edit',
@@ -19,7 +20,12 @@ export class CustomerEditComponent implements OnInit {
 
   constructor(private customerService: CustomerService,
               private activatedRoute: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private toastr: ToastrService) {
+
+  }
+
+  ngOnInit(): void {
     this.customerService.getAllTypeCustomer().subscribe(
       data => this.typeCustomerList = data
     );
@@ -27,9 +33,6 @@ export class CustomerEditComponent implements OnInit {
     this.subscription = this.customerService.findById(Number(idCustomer)).subscribe(
       (data) => {
         this.customer = data;
-      },(error)=>{
-        console.log(error)
-      },() =>{
         this.customerForm = new FormGroup({
           id: new FormControl(this.customer.id),
           code: new FormControl(this.customer.code, [Validators.required, Validators.pattern('^KH-[0-9]{4}$')]),
@@ -42,21 +45,34 @@ export class CustomerEditComponent implements OnInit {
           address: new FormControl(this.customer.address, [Validators.required]),
           typeCustomer: new FormControl(this.customer.typeCustomer['name'], [Validators.required])
         });
+      },(error)=>{
+        console.log(error)
+      },() =>{
       }
     );
-
-  }
-
-  ngOnInit(): void {
   }
 
   submit() {
     this.customer = this.customerForm.value;
 
-    this.customerService.update(this.customer).subscribe(
+    this.customerService.update(this.customer).subscribe(value => {
+      this.showSuccess();
+      }, error => {
+
+      },
+      () => {
+        this.router.navigateByUrl('/customer')
+      }
     );
   }
 
+  showSuccess() {
+    this.toastr.success('Update Successfully!', 'Notification!',{
+      timeOut: 1000,
+      progressBar: true,
+      progressAnimation: 'increasing',
+    });
+  }
 
   get code() {
     return this.customerForm.get('code');

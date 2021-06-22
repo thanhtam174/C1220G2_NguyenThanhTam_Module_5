@@ -7,16 +7,20 @@ import {EmployeeCreateComponent} from './employee-create/employee-create.compone
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
+import {EmployeeRoutingModule} from './employee-routing.module';
+import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [EmployeeDeleteComponent, EmployeePageComponent, EmployeeEditComponent, EmployeeCreateComponent],
-    imports: [
-        CommonModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        RouterModule
-    ]
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+    EmployeeRoutingModule,
+    NgbPaginationModule
+  ]
 })
 export class EmployeeModule {
 }

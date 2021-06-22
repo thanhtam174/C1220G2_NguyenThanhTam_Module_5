@@ -8,5 +8,5 @@ export interface Customer {
   gender: string;
   phone: string;
   address: string;
-  typeCustomer: number;
+  typeCustomer: string;
 }

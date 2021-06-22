@@ -1,0 +1,132 @@
+{
+  "postList": [
+    {
+      "id": 1,
+      "danhMuc": "Nhà đất",
+      "vungMien": "Hà nội",
+      "loaiNguoiDang": "Cá nhân",
+      "mucDich": "Cần bán",
+      "tinhTrang": "Mới",
+      "diaChi": "Hà Nội",
+      "dienTich": 300,
+      "huong": "Nam",
+      "tieuDe": "Cần bán nhà",
+      "noiDung": "Ngôi nhà hiện ở.......",
+      "gia": 145000000,
+      "ngayDang": "2020-04-17"
+    },
+    {
+      "id": 2,
+      "danhMuc": "Nhà đất",
+      "vungMien": "Hà nội",
+      "loaiNguoiDang": "Cá nhân",
+      "mucDich": "Cần bán",
+      "tinhTrang": "Mới",
+      "diaChi": "Hà Nội",
+      "dienTich": 500,
+      "huong": "Nam",
+      "tieuDe": "Cần bán nhà",
+      "noiDung": "Ngôi nhà hiện ở.......",
+      "gia": 160000000,
+      "ngayDang": "2020-04-17"
+    },
+    {
+      "id": 3,
+      "danhMuc": "Nhà đất",
+      "vungMien": "Hà nội",
+      "loaiNguoiDang": "Cá nhân",
+      "mucDich": "Cần bán",
+      "tinhTrang": "Mới",
+      "diaChi": "Hà Nội",
+      "dienTich": 400,
+      "huong": "Nam",
+      "tieuDe": "Cần bán nhà",
+      "noiDung": "Ngôi nhà hiện ở.......",
+      "gia": 150000000,
+      "ngayDang": "2020-04-17"
+    },
+    {
+      "danhMuc": "Nhà đất",
+      "vungMien": "Hà Nội",
+      "loaiNguoiDang": "",
+      "mucDich": "",
+      "tinhTrang": "",
+      "diaChi": "sdzxvđv",
+      "dienTich": 200,
+      "huong": "Nam",
+      "tieuDe": "sdhbcks",
+      "noiDung": "skjdbcl",
+      "gia": "2000000000",
+      "ngayDang": "2021-06-16",
+      "id": 4
+    },
+    {
+      "danhMuc": "Nhà đất",
+      "vungMien": "Đà Nẵng",
+      "loaiNguoiDang": "Mới",
+      "mucDich": "Cần bán",
+      "tinhTrang": "",
+      "diaChi": "295 Nguyễn Tất Thành",
+      "dienTich": 500,
+      "huong": "Đông",
+      "tieuDe": "dfdfvdfv",
+      "noiDung": "cxv x",
+      "gia": "1200000000",
+      "ngayDang": "2021-06-08",
+      "id": 5
+    },
+    {
+      "danhMuc": "Nhà đất",
+      "vungMien": "Đà Nẵng",
+      "loaiNguoiDang": "",
+      "mucDich": "",
+      "tinhTrang": "",
+      "diaChi": "295 Nguyễn Tất Thành",
+      "dienTich": 20000,
+      "huong": "Đông",
+      "tieuDe": "fdvsd",
+      "noiDung": "sfsdf",
+      "gia": "200000000",
+      "ngayDang": "2021-06-16",
+      "id": 6
+    }
+  ],
+  "danhMuc": [
+    {
+      "id": 1,
+      "ten": "Nhà đất"
+    }
+  ],
+  "vungMien": [
+    {
+      "id": 1,
+      "ten": "Tp Ho Chi Minh"
+    },
+    {
+      "id": 2,
+      "ten": "Hà Nội"
+    },
+    {
+      "id": 3,
+      "ten": "Đà Nẵng"
+    }
+  ],
+  "huong": [
+    {
+      "id": 1,
+      "ten": "Đông"
+    },
+    {
+      "id": 1,
+      "ten": "Nam"
+    },
+    {
+      "id": 1,
+      "ten": "Tây"
+    },
+    {
+      "id": 1,
+      "ten": "Bắc"
+    }
+  ]
+}

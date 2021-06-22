@@ -11,38 +11,8 @@
       "phone": "0903456721",
       "address": "Da Nang",
       "typeCustomer": {
-        "id": 1,
-        "name": "Diamond"
-      }
-    },
-    {
-      "code": "KH-0002",
-      "name": "John Doe",
-      "birthday": "1984-01-15",
-      "idCard": "123456789",
-      "email": "john@gmail.com",
-      "gender": "Male",
-      "phone": "0903456721",
-      "address": "Da Nang",
-      "typeCustomer": {
-        "id": 4,
-        "name": "Silver"
-      },
-      "id": 2
-    },
-    {
-      "id": 4,
-      "code": "KH-1234",
-      "name": "Tam Nguyen",
-      "birthday": "2021-05-31",
-      "idCard": "123123123",
-      "email": "sda@gmail.com",
-      "gender": "Male",
-      "phone": "0903908031",
-      "address": "K90/10 Dong Ke, Lien Chieu, Da Nang",
-      "typeCustomer": {
-        "id": 2,
-        "name": "Platinum"
+        "id": 3,
+        "name": "Gold"
       }
     },
     {
@@ -56,11 +26,12 @@
       "phone": "0903908031",
       "address": "K90/10 Dong Ke, Lien Chieu, Da Nang",
       "typeCustomer": {
-        "id": 3,
-        "name": "Gold"
+        "id": 4,
+        "name": "Silver"
       }
     },
     {
+      "id": 6,
       "code": "KH-1234",
       "name": "Cong Nguyen",
       "birthday": "2021-06-10",
@@ -70,10 +41,219 @@
       "phone": "0903908025",
       "address": "Hai Phong",
       "typeCustomer": {
+        "id": 2,
+        "name": "Platinum"
+      }
+    },
+    {
+      "code": "KH-3556",
+      "name": "Tuan Nguyen",
+      "birthday": "2021-06-09",
+      "idCard": "125221521472",
+      "email": "member@gmail.com",
+      "gender": "Male",
+      "phone": "0902154766",
+      "address": "Binh Dinh",
+      "typeCustomer": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "id": 7
+    },
+    {
+      "id": 9,
+      "code": "KH-0241",
+      "name": "Dong Tran",
+      "birthday": "2021-06-01",
+      "idCard": "125221521478",
+      "email": "dong@gmail.com",
+      "gender": "Male",
+      "phone": "0914755847",
+      "address": "Da Nang",
+      "typeCustomer": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "code": "KH-1447",
+      "name": "Kha Ho",
+      "birthday": "1995-05-30",
+      "idCard": "112056523",
+      "email": "kha@gmail.com",
+      "gender": "Male",
+      "phone": "0901255864",
+      "address": "Hue",
+      "typeCustomer": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "id": 10
+    },
+    {
+      "code": "KH-3208",
+      "name": "Khoa Nguyen",
+      "birthday": "1993-05-31",
+      "idCard": "155616165212",
+      "email": "khoa@gmail.com",
+      "gender": "Male",
+      "phone": "0903254577",
+      "address": "Da Nang",
+      "typeCustomer": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "id": 11
+    },
+    {
+      "code": "KH-2552",
+      "name": "Hoang Tran",
+      "birthday": "1998-06-01",
+      "idCard": "611125633",
+      "email": "hoang@gmail.com",
+      "gender": "Male",
+      "phone": "0903584567",
+      "address": "Quang Tri",
+      "typeCustomer": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "id": 12
+    },
+    {
+      "code": "KH-0263",
+      "name": "Kien Nguyen",
+      "birthday": "1984-12-07",
+      "idCard": "263523626",
+      "email": "kien@gmail.com",
+      "gender": "Male",
+      "phone": "0903125426",
+      "address": "Ha Noi",
+      "typeCustomer": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "id": 13
+    },
+    {
+      "id": 14,
+      "code": "KH-1111",
+      "name": "Hau Nguyen",
+      "birthday": "1994-12-04",
+      "idCard": "125225253",
+      "email": "hau@gmail.com",
+      "gender": "Female",
+      "phone": "0913548526",
+      "address": "Da Nang",
+      "typeCustomer": {
+        "id": 2,
+        "name": "Platinum"
+      }
+    },
+    {
+      "code": "KH-4583",
+      "name": "Tien Tran",
+      "birthday": "2000-06-16",
+      "idCard": "125221521472",
+      "email": "admin@gmail.com",
+      "gender": "Male",
+      "phone": "0913258463",
+      "address": "Da Nang",
+      "typeCustomer": {
         "id": 3,
         "name": "Gold"
       },
-      "id": 6
+      "id": 15
+    },
+    {
+      "code": "KH-0255",
+      "name": "Dat Nguyen",
+      "birthday": "1995-06-08",
+      "idCard": "125221521472",
+      "email": "dat@gmail.com",
+      "gender": "Male",
+      "phone": "0914578853",
+      "address": "Hue",
+      "typeCustomer": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "id": 16
+    },
+    {
+      "code": "KH-8222",
+      "name": "Phuc Le",
+      "birthday": "2021-06-07",
+      "idCard": "125221521425",
+      "email": "phuc@gmail.com",
+      "gender": "Male",
+      "phone": "0903254857",
+      "address": "Da Nang",
+      "typeCustomer": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "id": 17
+    },
+    {
+      "code": "KH-1275",
+      "name": "Thang Dinh",
+      "birthday": "1985-06-01",
+      "idCard": "165161652",
+      "email": "thang@gmail.com",
+      "gender": "Male",
+      "phone": "0903332157",
+      "address": "Binh Dinh",
+      "typeCustomer": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "id": 18
+    },
+    {
+      "code": "KH-2550",
+      "name": "Tien Hoang",
+      "birthday": "1985-06-01",
+      "idCard": "125221521472",
+      "email": "tien@gmail.com",
+      "gender": "Male",
+      "phone": "0903215487",
+      "address": "Da Nang",
+      "typeCustomer": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "id": 19
+    },
+    {
+      "code": "KH-1269",
+      "name": "Hieu Hoang",
+      "birthday": "1996-01-03",
+      "idCard": "151153196516",
+      "email": "hieu@gmail.com",
+      "gender": "Male",
+      "phone": "0903121254",
+      "address": "Ho Chi Minh",
+      "typeCustomer": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "id": 20
+    },
+    {
+      "code": "KH-8202",
+      "name": "Viet Le",
+      "birthday": "1999-06-01",
+      "idCard": "156163216",
+      "email": "viet@gmail.com",
+      "gender": "Female",
+      "phone": "0917523642",
+      "address": "Da Lat",
+      "typeCustomer": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "id": 21
     }
   ],
   "customerTypes": [

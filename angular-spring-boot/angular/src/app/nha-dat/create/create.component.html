@@ -1,0 +1,164 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-6">
+      <!--Form Create-->
+      <h2 style="text-align: center; color: cornflowerblue">Create Customer</h2>
+      <form [formGroup]="createForm" (ngSubmit)="submit()">
+        <div class="form-group">
+          <label for="danhMuc">Danh mục</label>
+          <select formControlName="danhMuc" name="danhMuc" class="form-control w-50" id="danhMuc">
+            <option disabled value="">---select---</option>
+            <option value="Nhà đất">Nhà đất</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="vungMien">Vùng miền</label>
+          <select formControlName="vungMien" name="vungMien" class="form-control w-50" id="vungMien">
+            <option disabled value="">---select---</option>
+            <option value="Đà nẵng">Đà Nẵng</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-4">
+          <fieldset class="form-group row">
+            <legend class="col-form-label col-sm-2 float-sm-left pt-0">Bạn là</legend>
+            <div class="col-sm-10">
+              <div style="margin-top: 25px" class="form-check">
+                <input class="form-check-input" type="radio" formControlName="loaiNguoiDang" name="loaiNguoiDang"
+                       id="gridRadios1" value="Cá nhân">
+                <label class="form-check-label" for="gridRadios1">
+                  Cá nhân
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="loaiNguoiDang" id="gridRadios2" value="Tổ chức">
+                <label class="form-check-label" for="gridRadios2">
+                  Tổ chức
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group col-md-4">
+          <fieldset class="form-group row">
+            <legend class="col-form-label col-sm-2 float-sm-left pt-0">Bạn đăng tin</legend>
+            <div class="col-sm-10">
+              <div style="margin-top: 25px" class="form-check">
+                <input class="form-check-input" type="radio" formControlName="mucDich" name="mucDich"
+                       id="gridRadios4" value="Cần bán" >
+                <label class="form-check-label" for="gridRadios4">
+                  Cần bán
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="mucDich" id="gridRadios3" value="Cần mua">
+                <label class="form-check-label" for="gridRadios3">
+                  Cần mua
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="mucDich" id="gridRadios5" value="Cho thuê">
+                <label class="form-check-label" for="gridRadios5">
+                  Cho thuê
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="mucDich" id="gridRadios6" value="Cần thuê">
+                <label class="form-check-label" for="gridRadios6">
+                  Cần thuê
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+        <div class="form-group col-md-4">
+          <fieldset class="form-group row">
+            <legend class="col-form-label col-sm-2 float-sm-left pt-0">Tình trạng</legend>
+            <div class="col-sm-10">
+              <div style="margin-top: 25px" class="form-check">
+                <input class="form-check-input" type="radio" formControlName="tinhTrang" name="tinhTrang"
+                       id="gridRadios7" value="Mới" checked>
+                <label class="form-check-label" for="gridRadios7">
+                  Mới
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="tinhTrang" id="gridRadios8" value="Đã sử dụng">
+                <label class="form-check-label" for="gridRadios8">
+                  Đã sử dụng
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="form-group">
+          <label for="name">Địa chỉ(*)</label>
+          <input formControlName="diaChi" name="diaChi" type="text" class="form-control" id="name" placeholder="Nhập địa chỉ">
+          <div *ngIf="!diaChi.valid && diaChi.touched">
+            <small [hidden]="!diaChi.hasError('required')" class="text-danger">Bạn phải nhập địa chỉ.</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="birthday">Diện tích(*)</label>
+          <input formControlName="dienTich" name="dienTich" type="number" class="form-control" id="birthday"
+                 placeholder="Dien tich">
+          <div *ngIf="!dienTich.valid && dienTich.touched">
+            <small [hidden]="!dienTich.hasError('required')" class="text-danger">Bạn phải nhập diện tích.</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="type">Hướng</label>
+          <select formControlName="huong" name="huong" class="form-control w-50" id="type">
+            <option disabled value="">---select---</option>
+            <option value="Đông">Đông</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="idCard">Tựa đề(*)</label>
+          <input formControlName="tieuDe" name="tieuDe" type="text" class="form-control" id="idCard"
+                 placeholder="Enter Id Card">
+          <div *ngIf="!tieuDe.valid && tieuDe.touched">
+            <small [hidden]="!tieuDe.hasError('required')" class="text-danger">Bạn phải nhập tiêu đề.</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Nội dung(*)</label>
+          <input formControlName="noiDung" name="noiDung" type="text" class="form-control" id="email"
+                 placeholder="Nội dung">
+          <div *ngIf="!noiDung.valid && noiDung.touched">
+            <small [hidden]="!noiDung.hasError('required')" class="text-danger">Bạn phải nhập nội dung.</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="gia">Giá</label>
+          <input formControlName="gia" name="gia" type="text" class="form-control" id="gia"
+                 placeholder="abc@.gmailcom">
+          <div *ngIf="!gia.valid && gia.touched">
+            <small [hidden]="!gia.hasError('required')" class="text-danger">Bạn phải nhập giá.</small>
+            <small [hidden]="!gia.hasError('min')" class="text-danger">Giá phải từ 100000000 trở lên.</small>
+          </div>
+          <div class="form-group">
+            <label for="birthday">Ngày đăng tin</label>
+            <input formControlName="ngayDang" name="ngayDang" type="date" class="form-control" id="ngayDang"
+                   placeholder="Ngày đăng">
+            <div *ngIf="!ngayDang.valid && ngayDang.touched">
+              <small [hidden]="!ngayDang.hasError('required')" class="text-danger">Bạn phải nhập ngày đăng.</small>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" style="text-align: left">
+          <button [disabled]="!createForm.valid" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
